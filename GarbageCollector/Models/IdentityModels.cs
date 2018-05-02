@@ -29,5 +29,7 @@ namespace GarbageCollector.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Customers> Customers { get; set; }
     }
 }
