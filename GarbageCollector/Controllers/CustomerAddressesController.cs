@@ -10,107 +10,107 @@ using GarbageCollector.Models;
 
 namespace GarbageCollector.Controllers
 {
-    public class CustomersController : Controller
+    public class CustomerAddressesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Customers
+        // GET: CustomerAddresses
         public ActionResult Index()
         {
-            return View(db.Customers.ToList());
+            return View(db.CustomerAdresses.ToList());
         }
 
-        // GET: Customers/Details/5
+        // GET: CustomerAddresses/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customers customers = db.Customers.Find(id);
-            if (customers == null)
+            CustomerAddress customerAddress = db.CustomerAdresses.Find(id);
+            if (customerAddress == null)
             {
                 return HttpNotFound();
             }
-            return View(customers);
+            return View(customerAddress);
         }
 
-        // GET: Customers/Create
+        // GET: CustomerAddresses/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Customers/Create
+        // POST: CustomerAddresses/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerId,Password,FirstName,LastName,Email")] Customers customers)
+        public ActionResult Create([Bind(Include = "Id,CustomerMainAddress,CustomerCity,CustomerState,CustomerZipCode")] CustomerAddress customerAddress)
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customers);
+                db.CustomerAdresses.Add(customerAddress);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(customers);
+            return View(customerAddress);
         }
 
-        // GET: Customers/Edit/5
+        // GET: CustomerAddresses/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customers customers = db.Customers.Find(id);
-            if (customers == null)
+            CustomerAddress customerAddress = db.CustomerAdresses.Find(id);
+            if (customerAddress == null)
             {
                 return HttpNotFound();
             }
-            return View(customers);
+            return View(customerAddress);
         }
 
-        // POST: Customers/Edit/5
+        // POST: CustomerAddresses/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerId,Password,FirstName,LastName,Email")] Customers customers)
+        public ActionResult Edit([Bind(Include = "Id,CustomerMainAddress,CustomerCity,CustomerState,CustomerZipCode")] CustomerAddress customerAddress)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(customers).State = EntityState.Modified;
+                db.Entry(customerAddress).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(customers);
+            return View(customerAddress);
         }
 
-        // GET: Customers/Delete/5
+        // GET: CustomerAddresses/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customers customers = db.Customers.Find(id);
-            if (customers == null)
+            CustomerAddress customerAddress = db.CustomerAdresses.Find(id);
+            if (customerAddress == null)
             {
                 return HttpNotFound();
             }
-            return View(customers);
+            return View(customerAddress);
         }
 
-        // POST: Customers/Delete/5
+        // POST: CustomerAddresses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Customers customers = db.Customers.Find(id);
-            db.Customers.Remove(customers);
+            CustomerAddress customerAddress = db.CustomerAdresses.Find(id);
+            db.CustomerAdresses.Remove(customerAddress);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

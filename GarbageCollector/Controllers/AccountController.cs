@@ -75,7 +75,7 @@ namespace GarbageCollector.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -139,6 +139,8 @@ namespace GarbageCollector.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+         //   ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
+         //                                   .ToList(), "Name", "Name");
             return View();
         }
 
@@ -426,6 +428,7 @@ namespace GarbageCollector.Controllers
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
+        private object context;
 
         private IAuthenticationManager AuthenticationManager
         {

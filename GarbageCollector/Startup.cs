@@ -9,6 +9,13 @@ namespace GarbageCollector
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            
+        }
+        private void createRolesandUsers()
+        {
+
+            
+            }
         }
     }
-}
+

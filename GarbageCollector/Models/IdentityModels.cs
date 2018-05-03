@@ -31,5 +31,7 @@ namespace GarbageCollector.Models
         }
 
         public DbSet<Customers> Customers { get; set; }
+        public DbSet<CustomerAddress> CustomerAdresses { get; set; }
+
     }
 }
