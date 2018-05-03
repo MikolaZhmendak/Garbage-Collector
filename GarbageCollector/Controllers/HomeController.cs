@@ -33,22 +33,10 @@ namespace GarbageCollector.Controllers
             ViewBag.TheMessage = "Thanks, we got your message!";
             return View();
         }
-        public ActionResult Foo()
-        {
-            return View("About");
-        }
-        public ActionResult Serial (string letterCase)
-        {
-            var serial = "ABCDEFG";
-            if (letterCase == "lower")
-            {
-                return Content(serial.ToLower());
-            }
-            return Content(serial);
+       
         }
 
     }
 
 
 
-}

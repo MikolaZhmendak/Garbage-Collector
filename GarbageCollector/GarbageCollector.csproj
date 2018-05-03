@@ -230,10 +230,16 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CustomerPhoneNumber.cs" />
     <Compile Include="Models\CustomerAddress.cs" />
     <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeAddress.cs" />
+    <Compile Include="Models\EmployeePhoneNumber.cs" />
+    <Compile Include="Models\FinishedPickups.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PickupDate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
