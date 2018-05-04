@@ -139,6 +139,7 @@ namespace GarbageCollector.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+          //  var user = new ApplicationUser() { UserName = model.UserName, BirthDate = model.BirthDate };
          //   ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
          //                                   .ToList(), "Name", "Name");
             return View();

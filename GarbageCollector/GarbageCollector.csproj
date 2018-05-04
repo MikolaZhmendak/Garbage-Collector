@@ -197,7 +197,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerAddressesController.cs" />
+    <Compile Include="Controllers\CustomerPhoneNumbersController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\EmployeeAddressesController.cs" />
+    <Compile Include="Controllers\EmployeePhoneNumbersController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\FinishedPickupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\userscontroller.cs" />
@@ -227,6 +232,18 @@
     <Compile Include="Migrations\201805031634236_UpdatedCustomerModel1.cs" />
     <Compile Include="Migrations\201805031634236_UpdatedCustomerModel1.Designer.cs">
       <DependentUpon>201805031634236_UpdatedCustomerModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805032021210_AddedMoreModels.cs" />
+    <Compile Include="Migrations\201805032021210_AddedMoreModels.Designer.cs">
+      <DependentUpon>201805032021210_AddedMoreModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805032028318_AddedMoreModels2.cs" />
+    <Compile Include="Migrations\201805032028318_AddedMoreModels2.Designer.cs">
+      <DependentUpon>201805032028318_AddedMoreModels2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805041332265_BirthDate.cs" />
+    <Compile Include="Migrations\201805041332265_BirthDate.Designer.cs">
+      <DependentUpon>201805041332265_BirthDate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -314,6 +331,31 @@
     <Content Include="Views\CustomerAddresses\Edit.cshtml" />
     <Content Include="Views\CustomerAddresses\Index.cshtml" />
     <Content Include="Views\View.cshtml" />
+    <Content Include="Views\CustomerPhoneNumbers\Create.cshtml" />
+    <Content Include="Views\CustomerPhoneNumbers\Delete.cshtml" />
+    <Content Include="Views\CustomerPhoneNumbers\Details.cshtml" />
+    <Content Include="Views\CustomerPhoneNumbers\Edit.cshtml" />
+    <Content Include="Views\CustomerPhoneNumbers\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\EmployeeAddresses\Create.cshtml" />
+    <Content Include="Views\EmployeeAddresses\Delete.cshtml" />
+    <Content Include="Views\EmployeeAddresses\Details.cshtml" />
+    <Content Include="Views\EmployeeAddresses\Edit.cshtml" />
+    <Content Include="Views\EmployeeAddresses\Index.cshtml" />
+    <Content Include="Views\EmployeePhoneNumbers\Create.cshtml" />
+    <Content Include="Views\EmployeePhoneNumbers\Delete.cshtml" />
+    <Content Include="Views\EmployeePhoneNumbers\Details.cshtml" />
+    <Content Include="Views\EmployeePhoneNumbers\Edit.cshtml" />
+    <Content Include="Views\EmployeePhoneNumbers\Index.cshtml" />
+    <Content Include="Views\FinishedPickups\Create.cshtml" />
+    <Content Include="Views\FinishedPickups\Delete.cshtml" />
+    <Content Include="Views\FinishedPickups\Details.cshtml" />
+    <Content Include="Views\FinishedPickups\Edit.cshtml" />
+    <Content Include="Views\FinishedPickups\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -345,6 +387,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805031634236_UpdatedCustomerModel1.resx">
       <DependentUpon>201805031634236_UpdatedCustomerModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805032021210_AddedMoreModels.resx">
+      <DependentUpon>201805032021210_AddedMoreModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805032028318_AddedMoreModels2.resx">
+      <DependentUpon>201805032028318_AddedMoreModels2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805041332265_BirthDate.resx">
+      <DependentUpon>201805041332265_BirthDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
